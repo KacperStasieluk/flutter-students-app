@@ -1,0 +1,244 @@
+{
+  "students": [
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "indexNumber": 12345,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 3
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 4
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "firstName": "Ala",
+      "lastName": "Makota",
+      "indexNumber": 12346,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 5
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 3
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "firstName": "Adam",
+      "lastName": "Nowak",
+      "indexNumber": 12347,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 5
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 5
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 4
+        }
+      ]
+    },
+    {
+      "firstName": "Ala",
+      "lastName": "Makota",
+      "indexNumber": 12346,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 5
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 3
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "indexNumber": 12345,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 3
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 4
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "firstName": "Ala",
+      "lastName": "Makota",
+      "indexNumber": 12346,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 5
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 3
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "indexNumber": 12345,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 3
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 4
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "firstName": "Ala",
+      "lastName": "Makota",
+      "indexNumber": 12346,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 5
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 3
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "indexNumber": 12345,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 3
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 4
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "firstName": "Ala",
+      "lastName": "Makota",
+      "indexNumber": 12346,
+      "grades":
+      [
+        {
+          "subject": "Matematyka",
+          "grade": 5
+        },
+        {
+          "subject": "PWI",
+          "grade": 5
+        },
+        {
+          "subject": "Logika",
+          "grade": 3
+        },
+        {
+          "subject": "Statystyka",
+          "grade": 3
+        }
+      ]
+    }
+  ]
+}
