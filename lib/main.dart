@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
-
+import 'dart:io';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -18,8 +20,8 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
 
   Map<String, dynamic> data = {};
-
-
+  bool _customTileExpanded = false;
+  File file = File('/cache/cache.txt');
 
   Future<String> getData() async {
     var response = await http.get(
@@ -30,10 +32,21 @@ class HomePageState extends State<HomePage> {
     );
 
     setState(() {
-      data = jsonDecode(response.body);
+      print(response.statusCode);
+      if (response.statusCode == 200)
+        {
+          data = jsonDecode(response.body);
+        }
+      else
+        {
+          file.readAsString().then((String content) =>
+          {
+            data = jsonDecode(content)
+          });
+        }
     });
 
-    print(data["students"]); 
+    file = await file.writeAsString(data.toString());
 
     return "Success!";
   }
@@ -49,22 +62,36 @@ class HomePageState extends State<HomePage> {
   const title = "Studenci";
 
     List<Widget> mywidgets = [];
-    for(var x = 0; x <= data.length; x++){
+    for(var x = 0; x < data["students"].length; x++){
 
-      String subtitles = "";
+      List<Widget> tiles = [];
+      tiles.add(Align(
+        alignment: Alignment.topLeft,
+          child: CachedNetworkImage(
+          placeholder: (context, url) => const CircularProgressIndicator(),
+          imageUrl: 'https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png',
+          width: 50,
+          height: 50,
+    ),));
       for(var y = 0; y < data["students"][x]["grades"].length; y++){
-        subtitles += "\n" + (data["students"][x]["grades"][y]["subject"] + ": " + data["students"][x]["grades"][y]["grade"].toString());
+          tiles.add(ListTile(
+              title: Text(data["students"][x]["grades"][y]["subject"] + ": " + data["students"][x]["grades"][y]["grade"].toString()),
+          )
+        );
       }
 
-      Text subtitle = Text(subtitles);
-
       mywidgets.add(
-          ListTile(
-            leading: Icon(Icons.album),
-            title: Text(data["students"][x]["firstName"] + ' ' + data["students"][x]["lastName"] + ' (' + data["students"][x]["indexNumber"].toString() + ')'),
-            subtitle: subtitle
-          )
+
+          ExpansionTile(
+            title: Text(data["students"][x]["firstName"] + ' ' + data["students"][x]["lastName"]),
+            subtitle: Text('Nr indeksu: ' + data["students"][x]["indexNumber"].toString()),
+            children: tiles,
+            onExpansionChanged: (bool expanded) {
+              setState(() => _customTileExpanded = expanded);
+            },
+          ),
       );
+
     }
 
   return MaterialApp(
@@ -73,13 +100,12 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text(title),
       ),
-      body: ListView.builder(
-        itemCount: mywidgets.length,
-        prototypeItem: mywidgets.first,
-        itemBuilder: (context, index) {
-          return mywidgets[index];
-        },
-      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: mywidgets,
+        ),
+      )
+
     ),
   );
   }
