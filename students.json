@@ -4,6 +4,7 @@
       "firstName": "Jan",
       "lastName": "Kowalski",
       "indexNumber": 12345,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -28,6 +29,7 @@
       "firstName": "Ala",
       "lastName": "Makota",
       "indexNumber": 12346,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -52,6 +54,7 @@
       "firstName": "Adam",
       "lastName": "Nowak",
       "indexNumber": 12347,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -76,6 +79,7 @@
       "firstName": "Jakub",
       "lastName": "Trzaskowski",
       "indexNumber": 12348,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -100,6 +104,7 @@
       "firstName": "Robert",
       "lastName": "Waszka",
       "indexNumber": 12349,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -124,6 +129,7 @@
       "firstName": "Krystyna",
       "lastName": "Onomatopeja",
       "indexNumber": 12350,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -148,6 +154,7 @@
       "firstName": "Cecylia",
       "lastName": "Onyszko",
       "indexNumber": 12351,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -172,6 +179,7 @@
       "firstName": "Paweł",
       "lastName": "Niemiec",
       "indexNumber": 12352,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -196,6 +204,7 @@
       "firstName": "Jan",
       "lastName": "Małyszko",
       "indexNumber": 12353,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
@@ -220,6 +229,7 @@
       "firstName": "Genowefa",
       "lastName": "Kudryś",
       "indexNumber": 12354,
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png",
       "grades":
       [
         {
