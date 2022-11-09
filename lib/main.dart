@@ -5,6 +5,7 @@ import 'dart:convert' show utf8;
 import 'dart:typed_data';
 //import 'dart:html' as html;
 import 'package:cached_network_image/cached_network_image.dart';
+//import 'package:path_provider/path_provider.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter/material.dart';
@@ -27,10 +28,27 @@ class HomePageState extends State<HomePage> {
   Map<String, dynamic> data = {};
   int dataLength = 0;
   bool _customTileExpanded = false;
+/*
+  Future<String> getFilePath() async {
+    Directory appDocumentsDirectory = await getApplicationDocumentsDirectory(); // 1
+    String appDocumentsPath = appDocumentsDirectory.path; // 2
+    String filePath = '$appDocumentsPath/demoTextFile.txt'; // 3
 
+    return filePath;
+  }
 
+  void saveFile() async {
+    File file = File(await getFilePath()); // 1
+    file.writeAsString("This is my demo text that will be saved to : demoTextFile.txt"); // 2
+  }
 
+  void readFile() async {
+    File file = File(await getFilePath()); // 1
+    String fileContent = await file.readAsString(); // 2
 
+    print('File Content: $fileContent');
+  }
+*/
   Future<String> getData() async {
 
     var response = await http.get(
@@ -69,28 +87,21 @@ class HomePageState extends State<HomePage> {
     for(var x = 0; x < dataLength; x++){
 
 
-      print("ello");
-      //html.window.localStorage["user"+x.toString()] = networkImageToBase64(data["students"][x]["img"]) as String;//Image(image: NetworkImage(data["students"][x]["img"])).toBa;
-      //print(html.window.localStorage["user1"]);
-      print("naura");
+
 
       List<Widget> tiles = [];
       tiles.add(Align(
         alignment: Alignment.topLeft,
           //child: Image(image: base64Decode(html.window.localStorage["user1"] as String) as ImageProvider),
           child: CachedNetworkImage(
+          key: UniqueKey(),
           placeholder: (context, url) => const CircularProgressIndicator(),
           imageUrl: data["students"][x]["img"],
           width: 50,
           height: 50,
-          cacheManager: CacheManager(
-              Config(
-                "fluttercampus",
-                stalePeriod: const Duration(seconds: 5),
-                //one week cache period
-              )
-          ),
+          errorWidget: (context, url, error) => Icon(Icons.error),
     ),));
+      print("Załadowano zdjęcie studenta nr" + x.toString());
       for(var y = 0; y < data["students"][x]["grades"].length; y++){
           tiles.add(ListTile(
               title: Text(data["students"][x]["grades"][y]["subject"] + ": " + data["students"][x]["grades"][y]["grade"].toString()),
@@ -109,6 +120,7 @@ class HomePageState extends State<HomePage> {
             },
           ),
       );
+      print("Załadowano kafelek studenta nr" + x.toString());
 
     }
 
